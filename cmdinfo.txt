@@ -1,4 +1,7 @@
 ```
-`!commands`   :   the thing you just used
-`!ping`       :   Monika replies with pong!
+!commands           :   the thing you just used
+!ping               :   Monika replies with pong!
+!setprefix <prefix> :   set a prefix so you can command Monika with <prefix>!<command>
+
+Additionally, Monika will reply to any of your message that mentions her name.
 ```
