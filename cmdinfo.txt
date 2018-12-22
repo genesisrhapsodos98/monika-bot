@@ -1,0 +1,4 @@
+```
+`!commands`   :   the thing you just used
+`!ping`       :   Monika replies with pong!
+```
