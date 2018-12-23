@@ -95,6 +95,47 @@ Monika.on("message", function(user, userID, channelID, msg, event) {
       });
       break;
 
+      case "uwu":
+        if (!arguments[0]) {
+          logger.info("!uwu: insufficient arguments");
+          Monika.sendMessage({
+            to: channelID,
+            message: "Insufficient argument to execute this command."
+          });  
+          break;
+        }
+        switch (arguments[0].toString().toLowerCase()) {
+        case "true":
+          logger.info("Monika will now uwu.");
+          config.uwu = true;
+          Monika.sendMessage({
+            to: channelID,
+            message: "Monika will now uwu."
+          });  
+          break;
+        case "false":
+          logger.info("Monika will stop uwu-ing.");
+          config.uwu = false;
+          Monika.sendMessage({
+            to: channelID,
+            message: "Monika will stop uwu-ing."
+          });  
+          break;
+        default:
+          logger.info("!uwu: Monika didn't understand that parameter");
+          Monika.sendMessage({
+            to: channelID,
+            message: "'" + arguments[0] + "' is not a valid argument for this command. The correct syntax is '!uwu true/false'"
+          });        
+        }
+        // Update config file
+        var cfgJSON = JSON.stringify(config);
+        fs.writeFile("./config.json", cfgJSON, "utf8", function(err) {
+          if (err) {
+            logger.info("!setprefix: Could not save config.json.");
+          }
+        });
+        break;
 
       // This is where we will handle undefined commands
       default:
@@ -104,9 +145,13 @@ Monika.on("message", function(user, userID, channelID, msg, event) {
         message: "Monika doesn't understand that command. Type '!commands' for a list of available commands uwu."
       });
     }
-  } else { // any message that doesn't start with '!'
+  } else if (config.uwu) { // any message that doesn't start with '!' or '<prefix>!'
     // Monika would still response to whoever calls her name uwu    
-    if (msg.search(/m[ \-.]{0,2}o[ \-.]{0,2}n[ \-.]{0,2}i[ \-.]{0,2}k[ -.]{0,2}a/i) != -1 && userID != Monika.id) {
+    if (
+    // Message contains a variation of 'monika'
+    (msg.search(/m[ \-.]{0,2}o[ \-.]{0,2}n[ \-.]{0,2}i[ \-.]{0,2}k[ -.]{0,2}a/i) != -1 ||
+    // or Monika was mentioned
+    msg.search("<@"+Monika.id+">") != -1)&& userID != Monika.id) {
       logger.info("Monika was summoned");
       Monika.sendMessage({
         to: channelID,
