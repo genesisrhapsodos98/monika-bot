@@ -19,7 +19,7 @@ monika-bot is a [Discord](https://www.discordapp.com) bot written in NodeJS usin
 | !ping                 | Monika replies with pong!                                            |
 | !setprefix `<prefix>` | set a prefix so you can command Monika with `<prefix>`!`<command>`   |
 | !prefix               | show current prefix                                                  |
-| !uwu `<true|false>`   | when set to true, Monika will uwu when her name is mentioned in chat |
+| !uwu `<true\|false>`   | when set to true, Monika will uwu when her name is mentioned in chat |
 
 # Contribution guide
 
