@@ -153,7 +153,7 @@ Monika.on('message', (user, userID, channelID, msg) => {
         case 'prefix': {
           Monika.sendMessage({
             to: channelID,
-            message: `Current prefix: \`${MonikaPrefix}\``,
+            message: `Current prefix: \`${MonikaPrefix}`,
           });
           break;
         }
@@ -219,5 +219,5 @@ Monika.on('message', (user, userID, channelID, msg) => {
         });
       }
     }
-  }  
+  }
 });
