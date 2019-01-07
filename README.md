@@ -1,7 +1,7 @@
 <b><h1 align="center">monika-bot</h1></b>
 
-# Table of content
-- [Table of content](#table-of-content)
+<h1>Table of content</h1>
+
 - [About this project](#about-this-project)
 - [Available commands](#available-commands)
 - [Contribution guide](#contribution-guide)
