@@ -1,22 +1,22 @@
-<b><h1 align="center">monika-bot</h1></b>
+<b><h1 align="center"><span style="color: crimson"> monika-bot </span></h1></b>
 
-<h1>Table of content</h1>
+<h1><span style="color: indianred"> Table of content </span></h1>
 
-- [About this project](#about-this-project)
-- [Available commands](#available-commands)
-- [Contribution guide](#contribution-guide)
-  - [Adding commands](#adding-commands)
-  - [Helper functions](#helper-functions)
-    - [saveConfig()](#saveconfig)
-    - [getPrefixStringFromUser(userID)](#getprefixstringfromuseruserid)
-- [Includes & dependencies](#includes--dependencies)
-- [Repositories](#repositories)
+- [ About this project ](#about-this-project)
+- [ Available commands ](#available-commands)
+- [ Contribution guide ](#contribution-guide)
+  - [ Adding commands ](#adding-commands)
+  - [ Helper functions ](#helper-functions)
+    - [ saveConfig() ](#saveconfig)
+    - [ getPrefixStringFromUser(userID) ](#getprefixstringfromuseruserid)
+- [ Includes & dependencies ](#includes--dependencies)
+- [ Repositories ](#repositories)
 
-# About this project
+# <span style="color: indianred"> About this project </span>
 
 monika-bot is a [Discord](https://www.discordapp.com) bot written in NodeJS using the [discord.io](https://www.npmjs.com/package/discord.io) package.
 
-# Available commands
+# <span style="color: indianred"> Available commands </span>
 | Command               | Description                                                          |
 | --------------------- | -------------------------------------------------------------------- |
 | !commands             | give a list of available commands                                    |
@@ -25,22 +25,22 @@ monika-bot is a [Discord](https://www.discordapp.com) bot written in NodeJS usin
 | !prefix               | show current prefix                                                  |
 | !uwu `<true\|false>`   | when set to true, Monika will uwu when her name is mentioned in chat |
 
-# Contribution guide
+# <span style="color: indianred"> Contribution guide </span>
 
-## Adding commands
+## <span style="color: olive"> Adding commands </span>
 
 `monika-bot` listens to commands using the `respondTo` method found in `monika_respond.js`.
 To add a command, simply add another case to the switch, code your logic under that case, then write a description for your command in [cmdinfo.txt](./cmdinfo.txt).
 
-## Helper functions
+## <span style="color: olive"> Helper functions </span>
 
 `monika-bot` comes with a set of helper functions to help make our code cleaner and more modular.
 
-### saveConfig()
+### <span style="color: darkcyan"> saveConfig() </span>
 
 Saves the current `config` object to `config.json`
 
-### getPrefixStringFromUser(userID)
+### <span style="color: darkcyan"> getPrefixStringFromUser(userID) </span>
 
 Search for `userID` from the `user` field of the `prefixList` array in the `config` object
 ```js
@@ -55,7 +55,7 @@ Search for `userID` from the `user` field of the `prefixList` array in the `conf
 }
 ```
 
-# Includes & dependencies
+# <span style="color: indianred"> Includes & dependencies </span>
 [NodeJS](https://nodejs.org/)
 
 [discord.io](https://www.npmjs.com/package/discord.io)
@@ -64,6 +64,6 @@ Search for `userID` from the `user` field of the `prefixList` array in the `conf
 
 
 
-# Repositories
+# <span style="color: indianred"> Repositories </span>
 
 [Github](https://github.com/genesisrhapsodos98/monika-bot)
