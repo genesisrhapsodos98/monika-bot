@@ -15,7 +15,7 @@ monika-bot is a [Discord](https://www.discordapp.com) bot written in NodeJS usin
 # Available commands
 | Command               | Description                                                          |
 | --------------------- | -------------------------------------------------------------------- |
-| !commands             | the thing you just used                                              |
+| !commands             | give a list of available commands                                    |
 | !ping                 | Monika replies with pong!                                            |
 | !setprefix `<prefix>` | set a prefix so you can command Monika with `<prefix>`!`<command>`   |
 | !prefix               | show current prefix                                                  |
