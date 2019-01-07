@@ -2,6 +2,7 @@
   "name": "monika-bot",
   "version": "1.0.0",
   "description": "A simple discord bot ",
+  "repository": "https://github.com/genesisrhapsodos98/monika-bot",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",
@@ -15,6 +16,7 @@
   "author": "Just Monika",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^10.12.18",
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "fs": "0.0.1-security",
     "winston": "^3.1.0"
