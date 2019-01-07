@@ -6,7 +6,11 @@
 - [Available commands](#available-commands)
 - [Contribution guide](#contribution-guide)
   - [Adding commands](#adding-commands)
-- [Github](#github)
+  - [Helper functions](#helper-functions)
+    - [saveConfig()](#saveconfig)
+    - [getPrefixStringFromUser(userID)](#getprefixstringfromuseruserid)
+- [Includes & dependencies](#includes--dependencies)
+- [Repositories](#repositories)
 
 # About this project
 
@@ -28,6 +32,38 @@ monika-bot is a [Discord](https://www.discordapp.com) bot written in NodeJS usin
 `monika-bot` listens to commands using the `respondTo` method found in `monika_respond.js`.
 To add a command, simply add another case to the switch, code your logic under that case, then write a description for your command in [cmdinfo.txt](./cmdinfo.txt).
 
-# Github
+## Helper functions
 
-[monika-bot](https://github.com/genesisrhapsodos98/monika-bot)
+`monika-bot` comes with a set of helper functions to help make our code cleaner and more modular.
+
+### saveConfig()
+
+Saves the current `config` object to `config.json`
+
+### getPrefixStringFromUser(userID)
+
+Search for `userID` from the `user` field of the `prefixList` array in the `config` object
+```js
+{
+  config: {
+    // ...
+    prefixList: [
+      "user": /*userID*/,
+      // ...
+    ]
+  }
+}
+```
+
+# Includes & dependencies
+[NodeJS](https://nodejs.org/)
+
+[discord.io](https://www.npmjs.com/package/discord.io)
+
+[Winston](https://www.npmjs.com/package/winston)
+
+
+
+# Repositories
+
+[Github](https://github.com/genesisrhapsodos98/monika-bot)
